@@ -1,0 +1,31 @@
+﻿@model Pizzas.Models.Pizza
+
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Nom)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Nom)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Pate)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(model => model.Pate.Nom)
+    </dd>
+
+    <dt>
+        @Html.DisplayNameFor(model => model.Ingredients)
+    </dt>
+
+    <dd>
+        @foreach (var item in Model.Ingredients)
+        {
+
+            @Html.DisplayFor(modelItem => item.Nom)<br>
+        }
+    </dd>
+
